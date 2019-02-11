@@ -1,53 +1,22 @@
-Docker Micro Containers
-=======================
+Unpaper docker image (webuni/unpaper)
+=====================================
 
-The smallest possible images for tools and programming languages.All images contain
-[`tini`](https://github.com/docker-library/official-images#init), `su-exec` and `docker-exec`.
+unpaper is a post-processing tool for scanned sheets of paper, especially for book pages that have been scanned from
+previously created photocopies. The main purpose is to make scanned book pages better readable on screen after
+conversion to PDF. Additionally, unpaper might be useful to enhance the quality of scanned pages before performing
+optical character recognition (OCR).
 
-- http://www.projectatomic.io/docs/docker-image-author-guidance/
+Usage
+-----
 
-Handling user permissions
--------------------------
+```bash
+docker run --rm -v "`pwd`:/app" -w /app webuni/unpaper --help
+```
 
-    docker run --rm -e SUEXEC=$(id -u):$(id -g) <webuni/image> sh
+Tags
+----
 
-- https://denibertovic.com/posts/handling-permissions-with-docker-volumes/
-
-Images
-------
-
-<table>
-<tr>
-  <td>Base</td><td>webuni/base</td><td>3.4, latest</td>
-  <td><a href="https://imagelayers.io/?images=webuni/base:3.4"><img src="https://badge.imagelayers.io/webuni/base:3.4.svg"></a></td>
-<tr>
-<tr>
-  <td>Ghoststript</td><td>webuni/ghostscript</td><td>9, latest</td>
-  <td><a href="https://imagelayers.io/?images=webuni/ghostscript:9"><img src="https://badge.imagelayers.io/webuni/ghostscript:9.svg"></a></td>
-<tr>
-<tr>
-  <td>ImageMagick</td><td>webuni/imagemagick</td><td>6, latest</td>
-  <td><a href="https://imagelayers.io/?images=webuni/imagemagick:6"><img src="https://badge.imagelayers.io/webuni/imagemagick:6.svg"></a></td>
-<tr>
-<tr>
-  <td>LaTeX, TeX, PDF</td><td>webuni/tex</td><td>2016, latest</td>
-  <td><a href="https://imagelayers.io/?images=webuni/tex:2016"><img src="https://badge.imagelayers.io/webuni/tex:2016.svg"></a></td>
-<tr>
-<tr>
-  <td>Python</td><td>webuni/python</td><td>2.7</td>
-  <td><a href="https://imagelayers.io/?images=webuni/python:2.7"><img src="https://badge.imagelayers.io/webuni/python:2.7.svg"></a></td>
-<tr>
-<tr>
-  <td>Python3</td><td>webuni/python</td><td>3.5</td>
-  <td><a href="https://imagelayers.io/?images=webuni/python:3.5"><img src="https://badge.imagelayers.io/webuni/python:3.5.svg"></a></td>
-<tr>
-<tr>
-  <td>Adminer</td><td>webuni/adminer</td><td>4.2, latest</td>
-  <td><a href="https://imagelayers.io/?images=webuni/adminer:4.2"><img src="https://badge.imagelayers.io/webuni/adminer:4.2.svg"></a></td>
-<tr>
-<tr>
-  <td>Redis</td><td>webuni/redis</td><td>3.2, latest</td>
-  <td><a href="https://imagelayers.io/?images=webuni/redis:3.2"><img src="https://badge.imagelayers.io/webuni/redis:3.2.svg"></a></td>
-<tr>
-</table>
-
+ Tag       | Size
+ --------- | ----
+ latest, 6 | [![](https://images.microbadger.com/badges/image/webuni/unpaper.svg)](https://microbadger.com/images/webuni/unpaper)
+ 6         | [![](https://images.microbadger.com/badges/image/webuni/unpaper:6.svg)](https://microbadger.com/images/webuni/unpaper:6)
